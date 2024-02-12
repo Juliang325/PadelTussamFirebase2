@@ -1,0 +1,7 @@
+{
+  "name": "PadelTussamFirebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
