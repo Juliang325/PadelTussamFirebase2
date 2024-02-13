@@ -68,7 +68,7 @@ export class FirebaseService {
   // ========== SETEAR UN DOCUMENTO ========
   setDocument(path: string, data:any){
     return setDoc(doc(getFirestore(),path), data) 
-  }
+  } 
 
   // ========== GET ========================
   async getDocument(path: string){

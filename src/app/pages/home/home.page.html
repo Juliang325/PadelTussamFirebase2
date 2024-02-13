@@ -10,4 +10,23 @@
       <ion-title size="large">home</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <ion-list *ngIf="leagues != undefined">
+      <ion-item-sliding  *ngFor="let l of leagues">
+        <ion-item>
+          <label>{{l.name}}</label>
+        </ion-item>
+
+        <ion-item-options>
+          <ion-item-option color="danger" (click)="deleteDocument(l.id)">Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list> 
+  </div>
+  <ion-button (click)="addDocument()" expand="block" fill="clear" shape="round">
+    Click me
+  </ion-button>
+  <ion-button (click)="signOut()" expand="block" fill="clear" shape="round">
+    Deslogueate
+  </ion-button>
 </ion-content>

@@ -72,7 +72,7 @@ export class LoginPage implements OnInit {
         this.form.reset();
 
       }).catch(error => {
-        console.log(error)
+        console.log(error) 
         this.presentToast({
           message: error.message,
           duration: 1500,
