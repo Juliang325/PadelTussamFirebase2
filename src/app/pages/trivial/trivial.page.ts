@@ -13,14 +13,19 @@ export class TrivialPage implements OnInit {
   preguntas:PreguntaTrivial[] = [];
   pregunta:PreguntaTrivial= {} as PreguntaTrivial ;
   respuestas:string[] = ['respuesta1', 'respuesta2', 'respuesta3', 'respuesta4'];
+  numeroIntentos:number=0;
 
-  constructor(private trivialSvc: TrivialService, private datePipe:DatePipe) { }
+  constructor(
+    // private trivialSvc: TrivialService, 
+    private datePipe:DatePipe) { }
 
   ngOnInit() {
   }
 
   responder(r:string){
-    console.log('Has respondido con la opcion: ' + r )
+    this.numeroIntentos = this.numeroIntentos + 1;
+    console.log('Has respondido con la opcion: ' + r + ' Intentos: ' + this.numeroIntentos)
+    
   }
 
 }
