@@ -16,7 +16,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule), canActivate:[LoginGuard]
+  },  {
+    path: 'trivial',
+    loadChildren: () => import('./pages/trivial/trivial.module').then( m => m.TrivialPageModule)
   },
+
 ];
 
 @NgModule({
